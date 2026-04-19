@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vipe Kayıt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    
+<div class="logo">
+  <h2>Social Peak</h2>
+</div>
+    
+  <h1>Sitemize Hoşgeldiniz</h1>
+<p class="desc">
+  Sistemlerimize erişmek için aşağıdaki bilgileri doldurarak kayıt olun!
+</p>
+
+    <form>
+
+      <label>Kullanıcı Adı</label>
+      <input type="text" placeholder="Bir kullanıcı adı gir...">
+
+      <label>Email</label>
+      <input type="email" placeholder="Bir E-Posta gir">
+
+      <label>Şifre</label>
+      <div class="password-box">
+        <input type="password" id="password" placeholder="********">
+        <span onclick="togglePassword()">👁</span>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="accept">
+        <label for="accept">
+          Kabul Ediyorum <span>Gizlilik Politikası ve Şartlar</span>
+        </label>
+      </div>
+
+      <button type="submit">KAYIT OL</button>
+
+    </form>
+
+    <p class="login-text">
+      Zaten hesabın varmı? <a href="#">Giriş Yap</a>
+    </p>
+
+    <div class="divider">
+      <span>Bizi Telegram kanalımızdan</span><br>
+      <span>Takip Edin</span>
+    </div>
+
+    <div class="social"><h4>SocialPeak0</h4></div>
+
+  </div>
+</div>
+
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault(); // sayfa yenilenmesin
+
+  const kabul = document.getElementById("accept").checked;
+
+  if (!kabul) {
+    alert("Şartları kabul etmelisin!");
+    return;
+  }
+
+  // yönlendirme
+  window.location.href = "https://www.vipechecker.art/register";
+});
+</script>
+</body>
+</html>

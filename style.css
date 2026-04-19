@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1f3c, #0d2c3f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1e2a4a, #0f2235);
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+
+  background: linear-gradient(90deg, #6a5cff, #ff4ecb, #00eaff);
+  background-size: 200%;
+
+  /* Standart + Webkit birlikte */
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 4s linear infinite;
+  transition: 0.3s;
+}
+
+/* Hover efekti */
+.logo h2:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #ff4ecb)
+          drop-shadow(0 0 20px #6a5cff);
+}
+
+.logo p {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Gradient animasyonu */
+@keyframes gradientMove {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.desc {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background: transparent;
+  color: white;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.checkbox span {
+  color: #7a6cff;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #6a5cff, #ff4ecb);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-text a {
+  color: #7a6cff;
+  text-decoration: none;
+}
+
+.divider {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.divider span {
+  background: #0f2235;
+  padding: 0 10px;
+}
+
+.social {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
