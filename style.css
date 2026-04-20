@@ -52,6 +52,7 @@ body {
 h1 {
   text-align: center;
   margin: 10px 0;
+  font-weight: 500;
   font-size: 24px;
 }
 
@@ -60,12 +61,14 @@ h1 {
   color: #aaa;
   margin-bottom: 25px;
   font-size: 14px;
+  font-weight: 300;
 }
 
 label {
   display: block;
   margin-top: 15px;
   font-size: 13px;
+  font-weight: 300;
   color: #ccc;
 }
 
@@ -77,6 +80,9 @@ input {
   border: 1px solid #444;
   background: rgba(255,255,255,0.05);
   color: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
 }
 
 input:focus {
@@ -84,39 +90,34 @@ input:focus {
   box-shadow: 0 0 8px rgba(106,92,255,0.5);
 }
 
+/* ŞİFRE */
 .password-box {
   position: relative;
 }
 
-.password-box span {
+.toggle-password {
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  width: 22px;
-  height: 22px;
+  opacity: 0.6;
+  background: none;
+  border: none;
 }
 
-.password-box span::before {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 10px;
-  border: 2px solid #aaa;
-  border-radius: 50%;
+.toggle-password:hover {
+  opacity: 1;
 }
 
-.password-box span::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #aaa;
-  border-radius: 50%;
+.toggle-password svg {
+  width: 20px;
+  height: 20px;
+  fill: #ccc;
 }
 
-button {
+/* BUTON */
+button[type="submit"] {
   width: 100%;
   padding: 14px;
   margin-top: 25px;
@@ -128,7 +129,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button[type="submit"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(255,78,203,0.4);
 }
