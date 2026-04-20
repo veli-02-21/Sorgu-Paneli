@@ -1,3 +1,4 @@
+/* GENEL AYARLAR */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,7 +29,6 @@ body {
   backdrop-filter: blur(10px);
 }
 
-/* LOGO */
 .logo {
   text-align: center;
   margin-bottom: 20px;
@@ -44,20 +44,14 @@ body {
   animation: gradientMove 4s linear infinite;
 }
 
-.logo h2:hover {
-  transform: scale(1.05);
-}
-
 @keyframes gradientMove {
   0% { background-position: 0%; }
   100% { background-position: 200%; }
 }
 
-/* TEXT */
 h1 {
   text-align: center;
   margin: 10px 0;
-  font-weight: 500;
   font-size: 24px;
 }
 
@@ -66,15 +60,12 @@ h1 {
   color: #aaa;
   margin-bottom: 25px;
   font-size: 14px;
-  font-weight: 300;
 }
 
-/* FORM */
 label {
   display: block;
   margin-top: 15px;
   font-size: 13px;
-  font-weight: 300;
   color: #ccc;
 }
 
@@ -86,9 +77,6 @@ input {
   border: 1px solid #444;
   background: rgba(255,255,255,0.05);
   color: white;
-  font-size: 14px;
-  outline: none;
-  transition: 0.2s;
 }
 
 input:focus {
@@ -96,7 +84,6 @@ input:focus {
   box-shadow: 0 0 8px rgba(106,92,255,0.5);
 }
 
-/* PASSWORD */
 .password-box {
   position: relative;
 }
@@ -105,10 +92,10 @@ input:focus {
   position: absolute;
   right: 15px;
   top: 50%;
-  transform: translateY(-20%);
+  transform: translateY(-50%);
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
 .password-box span::before {
@@ -123,13 +110,12 @@ input:focus {
 .password-box span::after {
   content: '';
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   background: #aaa;
   border-radius: 50%;
 }
 
-/* BUTTON */
 button {
   width: 100%;
   padding: 14px;
@@ -139,9 +125,7 @@ button {
   background: linear-gradient(90deg, #6a5cff, #ff4ecb);
   color: white;
   font-weight: 600;
-  letter-spacing: 0.5px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
@@ -153,16 +137,10 @@ button:hover {
   text-align: center;
   margin-top: 20px;
   font-size: 13px;
-  font-weight: 300;
   color: #aaa;
 }
 
 .login-text a {
   color: #7a6cff;
   text-decoration: none;
-  font-weight: 500;
-}
-
-.login-text a:hover {
-  text-decoration: underline;
 }
