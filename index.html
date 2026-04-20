@@ -62,19 +62,34 @@
 
 <script>
 document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
 
   const kabul = document.getElementById("accept").checked;
-
   if (!kabul) {
-    e.preventDefault();
     alert("Şartları kabul etmelisin!");
+    return;
   }
-});
 
-function togglePassword() {
-  const input = document.getElementById("password");
-  input.type = input.type === "password" ? "text" : "password";
-}
+  const data = {
+    username: document.querySelector('input[name="username"]').value,
+    email: document.querySelector('input[name="email"]').value,
+    password: document.querySelector('input[name="password"]').value
+  };
+
+  fetch("WEBHOOK_LINKİNİ_BURAYA_YAZ", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert("Kayıt başarılı!");
+  })
+  .catch(() => {
+    alert("Hata oluştu!");
+  });
+});
 </script>
 
 </body>
