@@ -33,28 +33,36 @@
       <label>Şifre</label>
       <div class="password-box">
         <input type="password" id="password" name="password" placeholder="Şifre" required>
-        <span onclick="togglePassword()"></span>
+        
+        <button type="button" class="toggle-password" onclick="togglePassword()">
+          <svg id="eye-icon" viewBox="0 0 24 24">
+            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z"/>
+          </svg>
+        </button>
       </div>
 
       <button type="submit">Kayıt Ol</button>
 
       <div class="login-text">
-        Zaten hesabın var mı? <a href="#">Giriş Yap</a>
+        Zaten hesabın var mı? <a href="https://vipchecker.site">Giriş Yap</a>
       </div>
       
     </form>
   </div>
 </div>
 
-<!-- JavaScript burada -->
+<!-- JAVASCRIPT -->
 <script>
 function togglePassword() {
   const passwordInput = document.getElementById('password');
+  const eyeIcon = document.getElementById('eye-icon');
 
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
+    eyeIcon.innerHTML = <path d="M2 4.27L3.27 3 21 20.73 19.73 22z"/>;
   } else {
     passwordInput.type = 'password';
+    eyeIcon.innerHTML = <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5z"/>;
   }
 }
 </script>
