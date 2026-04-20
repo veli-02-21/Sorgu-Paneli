@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -10,14 +11,14 @@
 <div class="container">
   <div class="card">
     
-<div class="logo">
-  <h2>Social Peak</h2>
-</div>
+    <div class="logo">
+      <h2>Social Peak</h2>
+    </div>
     
-  <h1>Sitemize Hoşgeldiniz</h1>
-<p class="desc">
-  Sistemlerimize erişmek için aşağıdaki bilgileri doldurarak kayıt olun!
-</p>
+    <h1>Sitemize Hoşgeldiniz</h1>
+    <p class="desc">
+      Sistemlerimize erişmek için aşağıdaki bilgileri doldurarak kayıt olun!
+    </p>
 
     <form>
 
@@ -28,10 +29,10 @@
       <input type="email" placeholder="Bir E-Posta gir">
 
       <label>Şifre</label>
-     <div class="password-box">
-  <input type="password" id="password" placeholder="Şifre">
-  <span class="toggle-password" onclick="togglePassword()">👁</span>
-</div>
+      <div class="password-box">
+        <input type="password" id="password" placeholder="Şifre">
+        <span onclick="togglePassword()"></span>
+      </div>
 
       <div class="checkbox">
         <input type="checkbox" id="accept">
@@ -57,14 +58,10 @@
 
   </div>
 </div>
-  <div class="password-box">
-  <input type="password" id="password">
-  <span onclick="togglePassword()"></span>
-</div>
 
 <script>
 document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault(); // sayfa yenilenmesin
+  e.preventDefault();
 
   const kabul = document.getElementById("accept").checked;
 
@@ -73,13 +70,14 @@ document.querySelector("form").addEventListener("submit", function(e) {
     return;
   }
 
-  // yönlendirme
   window.location.href = "https://www.vipechecker.art/register";
 });
-  function togglePassword() {
+
+function togglePassword() {
   const input = document.getElementById("password");
   input.type = input.type === "password" ? "text" : "password";
 }
 </script>
+
 </body>
 </html>
